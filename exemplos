@@ -1,0 +1,145 @@
+"""
+Entrada de dados - Exemplo 3
+"""
+# nome = input("Qual seu nome? ") # A função input sempre retorna uma variavel str
+# idade = input("Qual a sua idade? " )
+
+# ano_nascimento = 2022-int(idade)
+
+# print(f'O usuario digitou {nome} e o tipo da variavel'
+#      f'{type(nome)}')
+# print(f'{nome} tem {idade} anos.'
+#      f'{nome} nasceu em {ano_nascimento}.')
+
+numero_1 = int(input('Digite um numero: '))  # Se nao declarar a variavel o pycharm vai so contatenar.
+numero_2 = input('Digite outro numero: ')
+numero_2 = int(numero_2)
+
+print(numero_1 + numero_2)
+
+----------------------- Estou usando so para separar um exemplo do outro 
+"""
+Condições IF, ELIF e ELSE - Exemplo 4
+IF - SE
+ELIF - SE ISSO
+ELSE - SE NAO
+"""
+
+#if False:
+#    print('Verdadeiro.')
+# elif True:
+#    print("Agora e verdadeiro.")
+# else:
+#    print("Nao e verdadeiro.")
+if False:
+    print('um')
+elif False:
+    print('dois')
+elif False:
+    print('tres')
+elif True:
+    print('quatro')
+elif False:
+    print('cinco')
+else:
+    print('seis')
+    
+------------------------    
+"""
+Operadores Relacionais- Exemplo 4.1
+== > >= < <= !=
+= -> afirmando
+== -> perguntando (falso ou verdadeiro)
+> -> maior que
+>= -> maior que ou igual a
+< -> menor que
+<= -> menor que ou igual a
+!= -> diferente
+"""
+nome = input('Qual o seu nome? ')
+idade = input('Qual a sua idade? ')
+
+idade = int(idade)
+# Limite para pegar emprestimo
+idade_menor = 20 # muito jovem
+idade_maior = 30 # passou da idade
+
+if idade >= idade_menor and idade <= idade_maior:
+    print(f'{nome} pode pegar o emprestimo.')
+else:
+    print(f'{nome} NAO pode pegar o emprestimo.')
+--------------------------------
+
+"""
+Operadores logicos -Exemplo 4.2
+and, or, not
+in(esta) e not in(nao esta)
+"""
+usuario = input('Nome de usuario: ')
+senha = input('Senha do usuario: ')
+
+usuario_bd = 'luis'
+senha_bd = '123456'
+
+if usuario_bd == usuario and senha_bd == senha:
+    print('Voce esta logado no sistema.')
+else:
+    print('Usuario ou senha invalidos.')
+    
+    --------------------------------
+    """
+Formatando valores com modificadores - Exemplo 5
+
+:s - texto (strings)
+:d - inteiros (int)
+:f - numeros de ponto flutuante (float)
+:. (numero)f - Quantidade de casas decimais (float)
+: (caractere) (> ou < ou ^)(quantidade)(tipo - s, d ou f)
+
+> - esquerda
+< - direita
+^ - centro
+"""
+num_1 = 1
+print(f'{num_1:0^10}')
+
+nome = 'Luis Henrique'
+print(nome.lower()) # Tudo minusculo
+print(nome.upper()) # Tudo maiusculo
+print(nome.title()) # Primeiras letras maiuscula
+----------------------------------------
+
+"""
+Manipulando strings - Exemplo 6
+* Strings indices
+* Fatiamento de strings [inicio:fim:passo]
+* Funções built-in len, abs, type, print, etc...
+Essas funções podem ser usadas diretamente em cada tipo.
+
+"""
+
+# positivos   [012345678]
+texto       = 'Python s2'
+# negativos  -[987654321]
+print(texto[8]) # Acessar o indices numeros positivos
+print(texto[:-1]) # Retirando indices numeros negativos
+
+nova_string = texto[2:6] # Modo de Fatiar string
+print(nova_string)
+nova_string2 = texto[6:]
+print(nova_string2)
+nova_string3 = texto[:6]
+print(nova_string3)
+nova_string4 = texto[0:6]
+print(nova_string4)
+nova_string5 = texto[-9:-3] # Fatiamento com numeros negativos
+print(nova_string5)
+nova_string6 = texto[-9]
+print(nova_string6)
+nova_string7 = texto[:-1]
+print(nova_string7)
+nova_string8 = texto[0:2:6] # Pulando espaço
+print(nova_string8)
+nova_string9 = texto[0::3]
+# Se deixar em branco python entende que e para pular de 1 em 1
+print(nova_string9)
