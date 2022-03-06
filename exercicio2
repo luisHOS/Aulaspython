@@ -1,0 +1,57 @@
+"""
+Ex1
+Faça um programa que peça ao usuario para digitar um numero inteiro,
+informe se este numero e par ou impar. Caso o usuario nao digite um numero
+inteiro, informe que nao e um numero inteiro.
+"""
+ numero_inteiro = input('digite um numero inteiro: ')
+
+ if numero_inteiro.isdigit():
+    numero_inteiro = int(numero_inteiro)
+
+    if numero_inteiro % 2 == 0:
+        print(f'{numero_inteiro} e par.')
+    else:
+        print(f'{numero_inteiro} e impar.')
+ else:
+    print('Isso nao e um numero inteiro')
+
+
+"""
+Ex2
+Faça um programa que pergunte a hora ao usuario e, baseando-se no horario
+descrito, exiba a saudação apropriada. ex.
+Bom dia 0-11, boa tarde 12-17 e boa noite 18-23.
+"""
+ horas = input('Que horas sao (0-23)? ')
+
+ if horas.isdigit():
+    horas = int(horas)
+
+    if horas < 0 or horas > 23:
+        print("Horario deve estar entre 0 e 23.")
+    else:
+        if horas <= 11:
+            print('Bom dia!')
+        elif horas <= 17:
+            print('Boa tarde!')
+        else:
+            print('Boa noite!')
+ else:
+            print("Por favor, digite um horario entre 0 e 23.")
+
+"""
+Ex3
+Faça um programa que peça o primeiro nome do usuario. Se o nome tiver 4 letras ou 
+menos escreva "Seu nome e curto", se tiver entre 5 e 6 letras, escreva
+"seu nome e normal", maior que 6 escreva "seu nome e muito grande". 
+"""
+ nome = input('Digite seu nome: ')
+ tamanho = len(nome)
+
+ if tamanho <= 4:
+    print('Seu nome e curto!')
+ elif tamanho <= 6:
+    print('Seu nome e normal!')
+ else:
+    print('Seu nome e muito grande!')
